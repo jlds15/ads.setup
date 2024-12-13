@@ -29,9 +29,9 @@ A predefined container configuration file in the Compose file format is availabl
 
 Several helper scripts are also provided for running the following preset commands:
 
-- Official planning demo 
+- Official planning demo [[script](./scripts/run_docker_planning_example.sh)]
 
-- AWSIM
+- AWSIM [[script](./scripts/run_docker_awsim.sh)]
 
 To execute your custom commands, use the following:
 
