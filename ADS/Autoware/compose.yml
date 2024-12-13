@@ -9,8 +9,14 @@ services:
     privileged: true
     network_mode: host
     volumes:
-      - ${DIR_MAPS:?err}:${DIR_MAPS_TARGET:?err}:ro
-      - ${DIR_AUTOWARE_DATA:?err}:${DIR_AUTOWARE_DATA:?err}:ro
+      - type: bind
+        source: ${DIR_MAPS:?err}
+        target: ${DIR_MAPS_TARGET:?err}
+        read_only: true
+      - type: bind
+        source: ${DIR_AUTOWARE_DATA:?err}
+        target: ${DIR_AUTOWARE_DATA_TARGET:?err}
+        read_only: true
     deploy:
       resources:
         reservations:
