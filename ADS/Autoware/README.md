@@ -23,6 +23,21 @@ You can use the official Autoware (prebuilt) image from their CI pipeline to eas
     sudo ip link set lo multicast on
     ```
 
+- Environment variables
+
+    Two environment variables need to be set up, which can be modified in the [env](./.env) file:
+    
+    - `DIR_MAPS`
+        
+        Specifies the directory on the host where map data will be bound.
+        _Default_: `~/autoware_maps`
+
+    - `DIR_AUTOWARE_DATA`
+
+        Specifies the directory on the host where Autoware data will be bound.
+        _Default_: `~/autoware_data`
+
+
 ### Run Autoware
 
 A predefined container configuration file in the Compose file format is available. This file provides basic configurations for running Autoware on your host system.
