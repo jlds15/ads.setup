@@ -25,18 +25,29 @@ You can use the official Autoware (prebuilt) image from their CI pipeline to eas
 
 - Environment variables
 
-    Two environment variables need to be set up, which can be modified in the [env](./.env) file:
+    Few environment variables need to be set up, which can be modified in the [env](./.env) file:
     
     - `DIR_MAPS`
         
         Specifies the directory on the host where map data will be bound.
         _Default_: `~/autoware_maps`
 
+
     - `DIR_AUTOWARE_DATA`
 
-        Specifies the directory on the host where Autoware data will be bound.
+        Specifies the directory on the host where `autoware_data` will be bound.
         _Default_: `~/autoware_data`
 
+    - `DIR_MAPS_TARGET`
+        
+        Specifies the directory in the container where map data will be placed.
+        _Default_: `/data/maps`
+
+    - `DIR_AUTOWARE_DATA_TARGET`
+
+        Specifies the directory in the container where `autoware_data` will be placed.
+        **Note**: This only useful for images don't come with `autoware_data`, e.g., `devel`. Change to `/root/autoware_data` if your want to replace image's original.
+        _Default_: `/root/autoware_data_inactivate`
 
 ### Run Autoware
 
