@@ -1,0 +1,21 @@
+services:
+  autoware:
+    image: ghcr.io/autowarefoundation/autoware:universe-cuda
+    env_file:
+      - .env
+    environment:
+      DISPLAY: ${DISPLAY:?err}
+      NVIDIA_DRIVER_CAPABILITIES: all
+    privileged: true
+    network_mode: host
+    volumes:
+      - ${DIR_MAPS:?err}:/data/maps:ro
+      - ${DIR_AUTOWARE_DATA:?err}:/root/autoware_data:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
