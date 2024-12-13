@@ -9,8 +9,8 @@ services:
     privileged: true
     network_mode: host
     volumes:
-      - ${DIR_MAPS:?err}:/data/maps:ro
-      - ${DIR_AUTOWARE_DATA:?err}:/root/autoware_data:ro
+      - ${DIR_MAPS:?err}:${DIR_MAPS_TARGET:?err}:ro
+      - ${DIR_AUTOWARE_DATA:?err}:${DIR_AUTOWARE_DATA:?err}:ro
     deploy:
       resources:
         reservations:
