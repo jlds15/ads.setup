@@ -1,0 +1,29 @@
+services:
+  autoware:
+    image: ghcr.io/autowarefoundation/autoware:universe-devel-cuda-0.39.1
+    environment:
+      DISPLAY: ${DISPLAY:?err}
+      NVIDIA_DRIVER_CAPABILITIES: all
+    privileged: true
+    network_mode: host
+    volumes:
+      - type: bind
+        source: ./scripts
+        target: /opt/scripts
+        read_only: true
+      - type: bind
+        source: ${DIR_MAPS:?err}
+        target: ${DIR_MAPS_TARGET:?err}
+        read_only: true
+      - type: bind
+        source: ${DIR_AUTOWARE_DATA:?err}
+        target: ${DIR_AUTOWARE_DATA_TARGET:?err}
+        read_only: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
