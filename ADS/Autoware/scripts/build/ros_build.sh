@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 
-. "$SCRIPT_DIR/utils.sh"
+. "$SCRIPT_DIR/../utils.sh"
 
 AW_REPO=${AW_REPO:-/local/repos/autoware}
 AW_TAG=${AW_TAG:-'0.39.1'}
