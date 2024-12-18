@@ -1,8 +1,6 @@
 services:
   autoware:
     image: ghcr.io/autowarefoundation/autoware:universe-cuda
-    env_file:
-      - .env
     environment:
       DISPLAY: ${DISPLAY:?err}
       NVIDIA_DRIVER_CAPABILITIES: all
