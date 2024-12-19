@@ -2,6 +2,8 @@
 
 ## Setup with Image
 
+[![Static Badge](https://img.shields.io/badge/Autoware-0.39.1-blue?style=flat-square)](https://github.com/autowarefoundation/autoware/tree/0.39.1)
+
 You can use the official Autoware (prebuilt) image from their CI pipeline to easily set up your ADS workspace.
 
 ### Pre-requirements:
