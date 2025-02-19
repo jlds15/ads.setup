@@ -68,7 +68,7 @@ docker compose run --rm \
     $your_command
 ```
 
-Image's entry point script `ros_entrypoint.sh` will help to correctly set up the environment.
+Entry defined by `ENTRYPOINT ["/ros_entrypoint.sh"]` will help to correctly set up the environment.
 
 If you prefer a more interactive session within the container, you can:
 
