@@ -5,7 +5,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 . "$SCRIPT_DIR/../utils.sh"
 
 AW_REPO=${AW_REPO:-"$(mktemp -d)"}
-AW_TAG=${AW_TAG:-'0.39.1'}
+AW_TAG=${AW_TAG:-'0.43.1'}
 DATA_PATH=${DATA_PATH:-'/root/autoware_data'}
 
 if ! check_commands_exist 'ansible git tar zipinfo'; then

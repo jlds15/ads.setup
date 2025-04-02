@@ -5,7 +5,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 . "$SCRIPT_DIR/../utils.sh"
 
 AW_REPO=${AW_REPO:-/local/repos/autoware}
-AW_TAG=${AW_TAG:-'0.39.1'}
+AW_TAG=${AW_TAG:-'0.43.1'}
 
 BUILD_ROOT=${SRC_ROOT:-/local/build}
 SRC_ROOT="$BUILD_ROOT/src"
