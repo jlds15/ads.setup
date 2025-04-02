@@ -19,7 +19,7 @@ info "checkout out autoware:$AW_TAG"
 git clone --depth=1 -b "$AW_TAG" https://github.com/autowarefoundation/autoware.git "$AW_REPO"
 
 info "install ansible-galaxy-requirements"
-ansible-galaxy install -r "$AW_REPO/ansible-galaxy-requirements.yaml"
+(cd "$AW_REPO" && ansible-galaxy install -r ./ansible-galaxy-requirements.yaml)
 
 ansible-playbook autoware.dev_env.download_artifacts -e "data_dir=$DATA_PATH" ||
     fatal "failed to download autoware data"
