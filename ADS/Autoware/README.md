@@ -36,6 +36,7 @@ You can use the official Autoware (prebuilt) image from their CI pipeline to eas
   - `DIR_AUTOWARE_DATA`
 
     Specifies the directory on the host where `autoware_data` will be bound.
+    Artifacts can be easily downloaded via this [script](./scripts/misc/data_download.sh).
     _Default_: `~/autoware_data`
 
   - `DIR_MAPS_TARGET`
